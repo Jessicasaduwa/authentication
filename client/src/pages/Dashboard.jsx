@@ -13,8 +13,8 @@ const Dashboard = () => {
       {!!user && <h1 className="text-3xl font-bold">Hello {user.id} 👋</h1>} */}
 
       <body className="font-mono bg-black">
-        <div className="bg-[#181818] w-full h-fit flex rounded-3xl">
-          <div className="hidden md:flex md:max-w-48 lg:max-w-72 xl:max-w-xs lg:h-fit xl:h-screen flex-col justify-between py-2 bg-[#131313] ">
+        <div className="bg-[#181818] w-fit sm:w-full h-fit flex">
+          <div className="hidden sm:flex md:max-w-56 lg:max-w-72 xl:max-w-xs lg:h-fit xl:h-screen flex-col justify-between py-2 bg-[#131313] ">
             <div className="text-white h-2/3">
               <div className="my-6 mx-9 relative">
                 <div className="bg-[#2d68ff] h-[14px] w-[14px] rounded-full absolute left-8 top-1 ring ring-black"></div>
@@ -28,7 +28,7 @@ const Dashboard = () => {
                   <path d="M15.936 2.50098L21.501 8.06595V15.936L15.936 21.501H8.06595L2.50098 15.936V8.06595L8.06595 2.50098H15.936Z"></path>
                 </svg>
               </div>
-              <ul className="flex flex-col space-y-1 mx-9 mb-2 text-[#3e3d3d]">
+              <ul className="flex flex-col space-y-1 sm:mx-7 md:mx-9 mb-2 text-[#3e3d3d]">
                 <li className="flex gap-2 hover:text-white hover:bg-[#181818] rounded-xl py-2 pl-2 cursor-pointer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -104,8 +104,8 @@ const Dashboard = () => {
               </ul>
             </div>
 
-            <div className="h-1/2 flex flex-col justify-around mt-4">
-              <div className="bg-[#181818] rounded-lg mx-9 mb-3 p-2 h-60 flex flex-col justify-between shadow-sm shadow-neutral-700">
+            <div className="h-1/2 flex flex-col sm:justify-end md:justify-around mt-4">
+              <div className="bg-[#181818] rounded-xl mx-9 mb-3 p-2 h-60 hidden md:flex flex-col justify-between shadow-sm shadow-neutral-700">
                 <div className="h-14 flex justify-between">
                   <div className="bg-[#00a555] rounded-full h-12 w-12 place-content-center m-3 p-2">
                     <svg
@@ -132,15 +132,15 @@ const Dashboard = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="mx-2 text-neutral-500 text-sm">
+                <div className="mx-2 text-neutral-500 md:text-[12px] lg:text-sm">
                   Did you know you can set a Google Analytics code for your
                   products?
                 </div>
-                <button className="bg-[#181818] border border-neutral-500 mx-2 mb-3 rounded-lg p-2 text-white">
+                <button className="bg-[#181818] border border-neutral-500 mx-2 mb-3 rounded-lg p-2 text-white sm:text-sm lg:text-md">
                   Go Settings
                 </button>
               </div>
-              <button className="bg-[#2d68ff] mb-2 mx-9 p-2 rounded-lg text-white flex justify-center items-center space-x-1">
+              <button className="bg-[#2d68ff] mb-2 mx-5 md:mx-9 p-2 rounded-lg text-white flex justify-center items-center space-x-1">
                 <span>New Product</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -155,29 +155,47 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="w-full py-2 space-y-12">
-            <div className="m-8 mt-8">
-              <p className="text-[#464646] font-extrabold">
-                Hi John, Welcome Back!
-              </p>
-              <div className="flex justify-between">
-                <h1 className="text-white lg:text-4xl xl:text-5xl">
-                  Dashboard
-                </h1>
+            <div className="flex flex-col m-8 gap-2 sm:gap:0">
+              <div className="justify-between w-full h-12 sm:hidden flex">
                 <img
                   src="/0048.png_1200.png"
                   alt=""
-                  className="w-8 h-8 xl:w-10 xl:h-10"
+                  className="w-8 h-8 xl:w-10 xl:h-10 "
                 />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="32"
+                  height="42"
+                  fill="rgba(255,255,255,1)"
+                >
+                  <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+                </svg>
+              </div>
+              <div className="w-full">
+                <p className="text-[#464646] font-extrabold flex justify-center sm:justify-normal">
+                  Hi John, Welcome Back!
+                </p>
+                <div className="flex justify-center sm:justify-between">
+                  <h1 className=" text-white text-4xl sm:3xl lg:text-4xl xl:text-5xl content-center">
+                    Dashboard
+                  </h1>
+                  <img
+                    src="/0048.png_1200.png"
+                    alt=""
+                    className="w-8 h-8 xl:w-10 xl:h-10 hidden sm:flex"
+                  />
+                </div>
               </div>
             </div>
             <div className="flex flex-col mx-8 gap-2">
-              <div className="flex gap-2 h-52">
-                <div className="bg-[#1d1c1e] w-full rounded-xl">
+              <div className="flex flex-col sm:flex-row gap-8 mb-10 sm:m-0 sm:gap-2 h-80 sm:h-52">
+                <div className="bg-[#1d1c1e] w-full rounded-xl h-full">
                   <div className="flex space-x-4 mb-2 px-5 pt-5">
-                    <h1 className="text-neutral-400 font-semibold text-sm lg:text-md">
+                    <h1 className="text-neutral-400 font-semibold text-sm lg:text-[16px]">
                       Outstanding owed
                     </h1>
-                    <div className="bg-zinc-800 flex h-5 xl:h-6 w-[76px] text-green-500 rounded-lg text-sm">
+                    <div className="hidden bg-zinc-800 md:flex h-5 xl:h-6 w-[76px] text-green-500 rounded-lg text-sm">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -190,7 +208,7 @@ const Dashboard = () => {
                       <h1>+4.5%</h1>
                     </div>
                   </div>
-                  <h1 className="md:text-3xl lg:text-4xl xl:text-5xl mb-4 xl:mb-6 text-white px-4">
+                  <h1 className="md:text-3xl lg:text-4xl xl:text-5xl mb-4 sm:mb-9 lg:mb-4 xl:mb-6 text-white px-4">
                     <span className="text-neutral-400">$</span>640
                     <span className="text-neutral-400">.80</span>
                   </h1>
@@ -207,21 +225,21 @@ const Dashboard = () => {
                         <path d="M13 10H20L11 23V14H4L13 1V10Z"></path>
                       </svg>
                     </div>
-                    <div className="hidden lg:inline w-8/12 text-sm xl:text-md xl:ml-2 xl:mr-4 text-neutral-600">
+                    <div className="hidden lg:inline w-8/12 text-sm xl:text-[16px] xl:ml-2 xl:mr-4 text-neutral-600">
                       Payouts occur between the 1st and 3rd of each month
                     </div>
-                    <button className="w-3/12 text-white text-[14px] xl:text-md rounded-lg xl:p-2 border border-neutral-500">
+                    <button className="w-3/12 sm:w-5/12 lg:w-3/12 text-white text-[10px] lg:text-[14px] xl:text-md rounded-lg p-1 xl:p-2 border border-neutral-500">
                       View sale
                     </button>
                   </div>
                 </div>
-                <div className="bg-[#1d1c1e] w-full rounded-xl">
+                <div className="bg-[#1d1c1e] w-full rounded-xl h-full">
                   <div className="flex space-x-4 mb-2 px-5 pt-5">
-                    <h1 className="text-neutral-400 font-semibold text-sm lg:text-md">
+                    <h1 className="text-neutral-400 font-semibold text-sm lg:text-[16px]">
                       Total Payout
                     </h1>
                   </div>
-                  <h1 className="md:text-3xl lg:text-4xl xl:text-5xl mb-4 xl:mb-6 text-white px-4">
+                  <h1 className="md:text-3xl lg:text-4xl xl:text-5xl mb-4 sm:mb-9 lg:mb-4 xl:mb-7 text-white px-4">
                     <span className="text-neutral-400">$</span>29,688
                     <span className="text-neutral-400">.00</span>
                   </h1>
@@ -238,20 +256,20 @@ const Dashboard = () => {
                         <path d="M2.00488 8.99979H21.0049C21.5572 8.99979 22.0049 9.4475 22.0049 9.99979V19.9998C22.0049 20.5521 21.5572 20.9998 21.0049 20.9998H3.00488C2.4526 20.9998 2.00488 20.5521 2.00488 19.9998V8.99979ZM3.00488 2.99979H18.0049V6.99979H2.00488V3.99979C2.00488 3.4475 2.4526 2.99979 3.00488 2.99979ZM15.0049 13.9998V15.9998H18.0049V13.9998H15.0049Z"></path>
                       </svg>
                     </div>
-                    <div className="hidden lg:inline w-8/12 text-sm xl:text-md xl:ml-2 xl:mr-4 text-neutral-600">
+                    <div className="hidden lg:inline w-8/12 text-sm xl:text-[16px] xl:ml-2 xl:mr-4 text-neutral-600">
                       Update your payout method in {""}
                       <span className="text-white">Settings</span>
                     </div>
-                    <button className="w-3/12 text-white text-[14px] xl:text-md rounded-lg lg:p-2 border border-neutral-500">
+                    <button className="w-3/12 sm:w-5/12 lg:w-3/12 text-white text-[10px] lg:text-[14px] xl:text-md rounded-lg p-1 lg:p-2 border border-neutral-500">
                       View payouts
                     </button>
                   </div>
                 </div>
               </div>
               <div className="bg-[#1d1c1e] h-80 rounded-lg text-white">
-                <div className="flex justify-between px-5 py-6 text-xs">
+                <div className="flex justify-between px-5 py-6 text-xs lg:text-[16px]">
                   <span>Earnings history</span>
-                  <div className="space-x-2 xl:space-x-10">
+                  <div className="flex gap-2 xl:gap-0 xl:space-x-10">
                     <span>
                       <button className="text-neutral-600 hover:text-white hover:outline outline-offset-2 outline-3 outline-blue-600 rounded-full px-2">
                         Today
