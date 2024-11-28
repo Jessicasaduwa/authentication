@@ -3,10 +3,10 @@ const User = require("../models/users");
 const jwt = require("jsonwebtoken");
 
 const test = (req, res) => {
-  res.json("this test is working");
+  res.json("this test is working"); //doesn't authenticate but just checks if the test is working
 };
 
-// Register Users endpoint
+// Register Users endpoint (creates a required and a response)
 const registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;

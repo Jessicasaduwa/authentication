@@ -154,6 +154,7 @@ const Dashboard = () => {
               </button>
             </div>
           </div>
+
           <div className="w-full py-2 space-y-12">
             <div className="flex flex-col m-8 gap-2 sm:gap:0">
               <div className="justify-between w-full h-12 sm:hidden flex">
@@ -212,7 +213,7 @@ const Dashboard = () => {
                     <span className="text-neutral-400">$</span>640
                     <span className="text-neutral-400">.80</span>
                   </h1>
-                  <hr className="border-t border-t border-neutral-800 w-full" />
+                  <hr className="border-t border-neutral-800 w-full" />
                   <div className="flex mt-4 items-start gap-2 px-5">
                     <div className="hidden lg:flex place-content-center px-1 bg-[#fe9292] rounded-xl w-8">
                       <svg
@@ -243,7 +244,7 @@ const Dashboard = () => {
                     <span className="text-neutral-400">$</span>29,688
                     <span className="text-neutral-400">.00</span>
                   </h1>
-                  <hr className="border-t border-t border-neutral-800 w-full" />
+                  <hr className="border-t border-neutral-800 w-full" />
                   <div className="flex mt-4 items-start gap-2 px-5">
                     <div className="hidden lg:flex place-content-center px-1 bg-[#f9c32f] rounded-xl w-8">
                       <svg
